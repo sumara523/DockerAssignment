@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:13
 # Create app directory
 WORKDIR /usr/src/app
 # Install app dependencies
@@ -8,4 +8,4 @@ RUN npm install
 COPY . .
 #Expose port and start application
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "dev" ]
